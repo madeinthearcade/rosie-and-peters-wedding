@@ -13,43 +13,17 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="alobaidi-fade-plugin"></div>
-	<header>
-		<div class="container">
-			<a href="<?php echo home_url(); ?>" id="logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/template/logo.png" alt="logo" class="img-responsive">
-			</a>
-			<div class="cta">
-				<p class="no-margin-bottom">
-					If you have any questions, please contact us
-				</p>
-				<a href="tel:0000 000 0000" class="contact">
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					<span>0000 000 0000</span>
-				</a>
-				<a href="mailto:" class="contact">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-					<span>Email us</span>
-				</a>
-				<a href="#" class="contact" target="_blank">
-					<i class="fa fa-twitter" aria-hidden="true"></i>
-					<span>Follow us</span>
-				</a>
-			</div>
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-		</div>
-	</header>
-	<nav role="navigation" id="main-navigation">
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<div class="container">
-				<?php html5blank_nav(); ?>
-			</div>
-		</div>
-	</nav>
+
+	<header role="header" class="main-header">
+      <div class="container-fluid">
+         <?php
+         wp_nav_menu(array(
+            'theme_location' => 'header-menu',
+            'container' => false,
+            'menu_id' => false,
+            'menu_class' => 'main-header__menu',
+            'fallback_cb' => false
+         ));
+         ?>
+      </div>
+   </header>
