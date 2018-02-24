@@ -1,14 +1,14 @@
 // Include gulp & plugins
-var gulp = require("gulp"),
-  sass = require("gulp-sass"),
-  clean = require("gulp-clean-css"),
-  autoprefix = require("gulp-autoprefixer");
-(concat = require("gulp-concat")),
-  (uglify = require("gulp-uglify")),
-  (rename = require("gulp-rename")),
-  (imgmin = require("gulp-imagemin")),
-  (cache = require("gulp-cache")),
-  (modernizr = require("gulp-modernizr"));
+var gulp        = require("gulp"),
+    sass        = require("gulp-sass"),
+    clean       = require("gulp-clean-css"),
+    autoprefix  = require("gulp-autoprefixer"),
+    concat      = require("gulp-concat"),
+    uglify      = require("gulp-uglify"),
+    rename      = require("gulp-rename"),
+    imgmin      = require("gulp-imagemin"),
+    cache       = require("gulp-cache"),
+    modernizr   = require("gulp-modernizr");
 
 gulp.task("modernizr", function() {
   var settings = {
@@ -34,12 +34,8 @@ gulp.task("concat-scripts", function() {
     .src([
       "node_modules/jquery/dist/jquery.js",
       "node_modules/jquery-migrate/dist/jquery-migrate.js",
-      "node_modules/owl.carousel/dist/owl.carousel.js",
       "node_modules/wowjs/dist/wow.js",
-      "node_modules/magnific-popup/dist/jquery.magnific-popup.js",
       "node_modules/bootstrap/dist/js/bootstrap.js",
-      "node_modules/twitter-fetcher/js/twitterFetcher.js",
-      "node_modules/simpleweather/jquery.simpleWeather.js",
       "node_modules/animsition/dist/js/animsition.js",
       "js/lib/modernizr.js",
       "js/javascript.js"
@@ -47,7 +43,7 @@ gulp.task("concat-scripts", function() {
     .pipe(concat("main.js"))
     .pipe(rename({ suffix: ".min" }))
     .pipe(uglify())
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("dist/js"));
 });
 
 // Preprocess sass file + minify
@@ -58,7 +54,7 @@ gulp.task("minify-sass", function() {
     .pipe(autoprefix())
     .pipe(rename({ basename: "style", suffix: ".min" }))
     .pipe(clean())
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("dist/css"));
 });
 
 // Compress images
@@ -68,13 +64,13 @@ gulp.task("images", function() {
     .pipe(
       cache(
         imgmin({
-          optimizationLevel: 5,
+          optimizationLevel: 8,
           progressive: true,
           interlaced: true
         })
       )
     )
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("dist/img"));
 });
 
 // Move font-awesome fonts folder to css compiled folder
@@ -98,15 +94,9 @@ gulp.task("look", function() {
   );
 });
 
-// Concat vendor js files together
+// Gulp task runners
 gulp.task("js", ["concat-scripts"]);
-
-// Convert sass to css and then minimize it
 gulp.task("sass", ["minify-sass"]);
 gulp.task("fonts", ["icons"]);
-
-// Compress images
 gulp.task("img", ["images"]);
-
-// Look for changes
 gulp.task("watch", ["concat-scripts", "minify-sass", "look"]);

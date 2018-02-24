@@ -3,7 +3,7 @@
 //
 // by Mariusz Ciesla <http://mariusz.cc>
 
-$baseline-px: 10px;
+$baseline-px: 16px;
 
 @function remify($px) {
   $baseline-rem: $baseline-px / 1rem;

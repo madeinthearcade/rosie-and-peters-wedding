@@ -2,17 +2,6 @@
 	Helper Classes
 ======================================================= */
 
-.clearfix {
-	&:before, 
-	&:after { 
-		content:" "; 
-		display:block; 
-	}
-  &:after { 
-  	clear:both; 
-  }
-}
-
 .no-margin-bottom {
 	margin-bottom:0;
 }
