@@ -8,7 +8,7 @@
 	padding:0;
 	margin:remify(0 -15px 20px);
 	line-height:1.5;
-	@extend .clearfix;
+	@extend %clearfix;
 	li {
 		float:none;
 		display:block;
@@ -38,7 +38,7 @@
 #instafeed {
 	display:block;
 	margin:remify(20px -15px 0);
-	@extend .clearfix;
+	@extend %clearfix;
 	a {
 		display:block;
 		margin:remify(0 15px);
@@ -98,7 +98,7 @@
 .aptf-tweets-wrapper {
 	display:block;
 	margin:0 -15px;
-	@extend .clearfix;
+	@extend %clearfix;
 	.aptf-single-tweet-wrapper {
 		clear:none;
 		width:33.3333%;

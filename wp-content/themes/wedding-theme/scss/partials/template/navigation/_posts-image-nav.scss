@@ -5,7 +5,7 @@
 .latest-posts-slider-nav {
 	float:right;
 	display:block;
-	@extend .clearfix;
+	@extend %clearfix;
 	.owl-prev,
 	.owl-next {
 		float:left;
@@ -34,7 +34,7 @@
 
 .image-gallery-slider-nav {
 	display:block;
-	@extend .clearfix;
+	@extend %clearfix;
 	.owl-prev,
 	.owl-next {
 		float:left;

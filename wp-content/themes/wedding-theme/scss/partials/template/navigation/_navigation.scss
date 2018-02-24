@@ -96,7 +96,7 @@ nav ul {
 	padding:0;
 	margin:remify(10px 0);
 	line-height:1.5;
-	@extend .clearfix;
+	@extend %clearfix;
 	li {
 		display:block;
 		float:none;

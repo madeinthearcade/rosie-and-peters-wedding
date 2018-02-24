@@ -5,7 +5,7 @@
 header {
 	display:block;
 	position:relative;
-	@extend .clearfix;
+	@extend %clearfix;
 	#logo {
 		position:relative;
 		display:inline-block;
