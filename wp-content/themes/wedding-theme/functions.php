@@ -91,12 +91,11 @@ function html5blank_nav()
 function html5blank_header_scripts()
 {
 	if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+
 		wp_deregister_script('jquery');
-		wp_register_script('jquery', get_template_directory_uri() . '/build/js/main.min.js', array(), '', true);
+		wp_register_script('jquery', get_template_directory_uri() . '/dist/js/main.min.js', array(), '', true);
 		wp_enqueue_script('jquery');
 
-		wp_register_script('customfonts', 'https://use.typekit.net/wkp5oyw.js', array(), '', true);
-		wp_enqueue_script('customfonts');
 	}
 }
 
@@ -104,15 +103,14 @@ function html5blank_header_scripts()
 function html5blank_conditional_scripts()
 {
 	if (is_page('Sample Page')) {
-		// wp_register_script('instafeed', get_template_directory_uri() . '/js/lib/instafeed.js', array('jquery'), '1.4.1', true);
-		// wp_enqueue_script('instafeed');
+		
 	}
 }
 
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-	wp_register_style('style', get_template_directory_uri() . '/build/css/style.min.css', array(), '1.0', 'all');
+	wp_register_style('style', get_template_directory_uri() . '/dist/css/style.min.css', array(), '1.0', 'all');
 	wp_enqueue_style('style');
 }
 
@@ -443,7 +441,9 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 	return '<h2>' . $content . '</h2>';
 }
 
-/* Shortens excerpts or content */
+/* =======================================================
+	Shorterns excerpts
+======================================================= */
 function limit_words($string, $word_limit) {
     // creates an array of words from $string (this will be our excerpt)
     // explode divides the excerpt up by using a space character
@@ -456,7 +456,9 @@ function limit_words($string, $word_limit) {
     return implode(' ', array_slice($words, 0, $word_limit));
 }
 
-/* Show subpages shortcode */
+/* =======================================================
+	Show subpages shortcode
+======================================================= */
 function wpb_list_child_pages() { 
     global $post; 
     if ( is_page() && $post->post_parent )    
@@ -470,7 +472,9 @@ function wpb_list_child_pages() {
 }
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
-/* Breadcrumbs */
+/* =======================================================
+	Breadcrumbs
+======================================================= */
 function the_breadcrumb() {
         echo '<ul id="crumbs">';
     if (!is_home()) {
@@ -502,5 +506,71 @@ function the_breadcrumb() {
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
     echo '</ul>';
 }
+
+/* =======================================================
+	Show entry meta
+======================================================= */
+function peters_entry_meta() {
+	// Hide category and tag text for pages.
+	if ( 'post' == get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ' ) );
+		if ( $categories_list ) {
+			echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
+		}
+	}
+}
+
+/* =======================================================
+	Remove query strings from static resources
+======================================================= */
+function remove_css_js_ver( $src ) {
+if( strpos( $src, '?ver=' ) )
+$src = remove_query_arg( 'ver', $src );
+return $src;
+}
+add_filter( 'style_loader_src', 'remove_css_js_ver', 10, 2 );
+add_filter( 'script_loader_src', 'remove_css_js_ver', 10, 2 );
+
+/* =======================================================
+	Defer parsing
+======================================================= */
+// if (!(is_admin() )) {
+// 	function defer_parsing_of_js ( $url ) {
+// 	if ( FALSE === strpos( $url, '.js' ) ) return $url;
+// 	if ( strpos( $url, 'jquery.js' ) ) return $url;
+// 	return "$url' defer ";
+// 	}
+// 	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+// }
+
+/* =======================================================
+	Move all js files to footer
+======================================================= */
+// function remove_head_scripts() { 
+//    remove_action('wp_head', 'wp_print_scripts'); 
+//    remove_action('wp_head', 'wp_print_head_scripts', 9); 
+//    remove_action('wp_head', 'wp_enqueue_scripts', 1);
+ 
+//    add_action('wp_footer', 'wp_print_scripts', 5);
+//    add_action('wp_footer', 'wp_enqueue_scripts', 5);
+//    add_action('wp_footer', 'wp_print_head_scripts', 5); 
+// } 
+// add_action( 'wp_enqueue_scripts', 'remove_head_scripts' );
+
+/* =======================================================
+	Minify HTML
+// ======================================================= */
+// add_action('get_header', 'pt_html_minify_start');
+// function pt_html_minify_start()  {
+//     ob_start( 'pt_html_minyfy_finish' );
+// }
+// function pt_html_minyfy_finish( $html )  {
+//   $html = preg_replace('/<!--(?!s*(?:[if [^]]+]|!|>))(?:(?!-->).)*-->/s', '', $html);
+//   $html = str_replace(array("\r\n", "\r", "\n", "\t"), '', $html);
+//   while ( stristr($html, '  '))
+//      $html = str_replace('  ', ' ', $html);
+//  return $html;
+// }
 
 // Do Not Remove! ?>
