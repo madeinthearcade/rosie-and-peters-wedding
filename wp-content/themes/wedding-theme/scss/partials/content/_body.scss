@@ -4,11 +4,11 @@
 
 body { 
 	font-family:$baseFont;
-	font-weight:$baseWeight;
+	font-weight:$heavyWeight;
 	line-height:1.5;
 	overflow-x:hidden;
 	position:relative;
-	@include rem('font-size', 16px);
+	@include rem('font-size', 20px);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

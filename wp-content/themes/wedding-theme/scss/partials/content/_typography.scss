@@ -2,45 +2,40 @@
 	Typography
 ======================================================= */
 
-$baseFont:					'proxima-nova', sans-serif;
-$baseWeight:				400;
-$heavyWeight:				700;
-$baseSize:					16px;
+$titleFont:		'Yeseva One', cursive;
+$baseFont:		'Josefin Sans', sans-serif;
+$baseWeight:	400;
+$heavyWeight:	700;
+$baseSize:		16px;
 
 h1, h2, h3, h4, h5, h6 {
 	margin:remify(0 0 30px 0);
-	font-family:$baseFont;
-	font-weight:$heavyWeight;
+	font-family:$titleFont;
 	line-height:normal;
 	color:$primary;
 }
 
 h1 {
-	@include rem('font-size', 40px);
+	@include rem('font-size', 48px);
 }
 
 h2 {
-	margin-bottom:remify(20px);
-	@include rem('font-size', 32px);
+	@include rem('font-size', 48px);
 }
 
 h3 {
-	margin-bottom:remify(20px);
-	@include rem('font-size', 26px);
+	@include rem('font-size', 30px);
 }
 
 h4 {
-	margin-bottom:remify(15px);
 	@include rem('font-size', 20px);
 }
 
 h5 {
-	margin-bottom:remify(15px);
 	@include rem('font-size', 18px);
 }
 
 h6 {
-	margin-bottom:remify(15px);
 	@include rem('font-size', 16px);
 }
 
@@ -56,15 +51,4 @@ a {
 		color:$highlight;
 		text-decoration:none;
 	}
-}
-
-.intro {
-	@include rem('font-size', 20px);
-	p:last-child {
-		margin-bottom:0;
-	}
-}
-
-.shout {
-	@include rem('font-size', 20px);
 }
