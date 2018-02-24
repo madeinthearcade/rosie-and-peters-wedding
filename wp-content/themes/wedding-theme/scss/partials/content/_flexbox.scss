@@ -5,13 +5,30 @@
 .flex {
    display: flex;
    flex-direction: row;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
    &__item {
-      flex-basis: 0;
+      flex-basis: 100%;
       flex-grow: 1;
       padding: rem(80px);
       position: relative;
       overflow: hidden;
+      &:before,
+      &:after {
+         width: 0;
+         height: 0;
+         border: 10px solid transparent;
+         content: '';
+         position: absolute;
+         z-index: 1;
+      }
+      &:before {
+         top: 0;
+         left: 0;
+      }
+      &:after {
+         bottom: 0;
+         right: 0;
+      }
       & > img {
          position: absolute;
          top: 0;
@@ -21,12 +38,25 @@
          margin: auto;
          opacity: 0;
          width: 100%;
-         height: 100%;
          @include transition(1s);
       }
       &:hover > img {
          opacity: 1;
          @include transform(scale(1.1));
+      }
+      &:hover:before {
+         border-top-color: $primary;
+         border-right-color: $primary;
+         width: 100%;
+         height: 100%;
+         transition: width 0.35s ease-out, height 0.35s ease-out 0.35s;
+      }
+      &:hover:after {
+         border-bottom-color: $primary;
+         border-left-color: $primary;
+         width: 100%;
+         height: 100%;
+         transition: border-color 0s ease-out 0.8s, width 0.5s ease-out 0.8s, height 0.5s ease-out 1.4s;
       }
    }
    &__caption {
@@ -44,6 +74,16 @@
          &:last-child {
             margin-bottom: 0;
          }
+      }
+   }
+   @media (min-width:768px) {
+      &__item {
+         flex-basis: 50%;
+      }
+   }
+   @media (min-width:992px) {
+      &__item {
+         flex-basis: 0;
       }
    }
 }
