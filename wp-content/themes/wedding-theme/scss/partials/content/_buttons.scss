@@ -6,9 +6,14 @@
 	display: inline-block;
 	padding: remify(15px 30px);
 	background: transparent;
-	border: 3px solid $baseColor;
+   border: 3px solid $baseColor;
+   border-radius: 0;
+   text-transform: uppercase;
+   color: $baseColor;
+   letter-spacing: rem(2px);
 	@include transition(.25s);
 	&:hover {
-		background: $baseColor;
+      background: $baseColor;
+      color: white;
 	}
 }

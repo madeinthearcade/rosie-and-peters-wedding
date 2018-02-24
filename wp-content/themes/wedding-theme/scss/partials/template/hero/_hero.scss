@@ -1,0 +1,45 @@
+/* =======================================================
+	Hero
+======================================================= */
+
+#hero {
+   display: flex;
+   flex-direction: column;
+   background-image: url('../img/template/hero-bg.png');
+   background-repeat: repeat;
+   background-size: contain;
+   min-height: 100vh;
+   position: relative;
+   justify-content: center;
+   &__text {
+      & > h1 {
+         color: white;
+         text-transform: lowercase;
+         font-size: rem(128px);
+         margin: 0;
+      }
+   }
+   &__tagline {
+      font-family: $baseFont;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: rem(5px);
+      color: white;
+      font-size: rem(30px);
+      margin: rem(20px 0);
+   }
+   &__scroller {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      & > a {
+         color: white;
+         text-transform: uppercase;
+         letter-spacing: rem(2px);
+         font-size: rem(14px);
+      } 
+   }
+}

@@ -27,7 +27,6 @@
 @import 'partials/content/flexbox';
 @import 'partials/content/fullwidth-block';
 @import 'partials/content/static-posts';
-@import 'partials/content/post-index';
 
 /* =======================================================
 	Images
@@ -40,6 +39,7 @@
 ======================================================= */
 @import 'partials/template/header/header';
 @import 'partials/template/navigation/navigation';
+@import 'partials/template/hero/hero';
 @import 'partials/template/forms/nav-form';
 @import 'partials/template/forms/contact-form';
 @import 'partials/template/navigation/breadcrumbs';
