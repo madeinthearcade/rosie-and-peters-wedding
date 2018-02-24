@@ -1,0 +1,26 @@
+/* =======================================================
+	Lists
+======================================================= */
+
+ul, ol {
+	padding-left:remify(20px);
+	margin-bottom:remify(30px);
+	line-height:2;
+	li > a {
+		text-decoration:underline;
+	}
+}
+
+ul.customlist {
+	list-style:none;
+	li {
+		position:relative;
+		&:before {
+			content:'\f1c1';
+			font-family:'FontAwesome';
+			position:absolute;
+			left:-20px;
+			top:0;
+		}
+	}
+}

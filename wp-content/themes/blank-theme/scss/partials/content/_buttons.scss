@@ -1,0 +1,21 @@
+/* =======================================================
+	Buttons & Links
+======================================================= */
+
+.btn {
+	display:inline-block;
+	background:$secondary;
+	padding:remify(15px 25px);
+	margin-bottom:0;
+	font-weight:$heavyWeight;
+	color:#fff;
+	border:0;
+	border-radius:50px;
+	@include rem('font-size', 18px);
+	@include transition(.35s);
+	&:hover {
+		background:$highlight;
+		text-decoration:none;
+		color:#fff;
+	}
+}

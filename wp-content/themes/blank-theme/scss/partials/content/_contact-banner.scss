@@ -1,0 +1,40 @@
+/* =======================================================
+	Contact Page
+======================================================= */
+
+#map-banner {
+	display:block;
+	max-height:300px;
+	.acf-map {
+		height:300px;
+		padding-bottom:0;
+	}
+	@media (min-width:768px) {
+		display:block;
+		max-height:500px;
+		.acf-map {
+			height:500px;
+		}
+	}
+}
+
+.acf-map {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom:88%;
+	margin:0;
+}
+
+.acf-map > div {
+	position: absolute; 
+	// pointer-events: none; 
+	top: 0; 
+	left: 0; 
+	width: 100% !important; 
+	height: 100% !important;
+}
+
+.acf-map img {
+   max-width: inherit !important;
+}

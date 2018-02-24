@@ -1,0 +1,82 @@
+/* =======================================================
+	Posts & Image Nav
+======================================================= */
+
+.latest-posts-slider-nav {
+	float:right;
+	display:block;
+	@extend .clearfix;
+	.owl-prev,
+	.owl-next {
+		float:left;
+		padding:remify(12px 15px);
+		background:$primary;
+		line-height:1;
+		cursor:pointer;
+		@include transition(.35s);
+		i.fa {
+			color:$highlight;
+			position:relative;
+			@include transition(.35s);
+		}
+		&:hover,
+		&.disabled {
+			background:$highlight;
+			i.fa {
+				color:$primary;
+			}
+		}
+	}
+	.owl-next {
+		float:right;
+	}
+}
+
+.image-gallery-slider-nav {
+	display:block;
+	@extend .clearfix;
+	.owl-prev,
+	.owl-next {
+		float:left;
+		width:50%;
+		background:$primary;
+		line-height:1;
+		cursor:pointer;
+		padding:remify(15px);
+		@include transition(.35s);
+		i.fa {
+			color:$highlight;
+			position:relative;
+			@include transition(.35s);
+		}
+		&:hover,
+		&.disabled {
+			background:$highlight;
+			i.fa {
+				color:$primary;
+			}
+		}
+	}
+	.owl-next {
+		float:right;
+		text-align:right;
+	}
+	@media (min-width:992px) {
+		position:static;
+		width:100%;
+		.owl-prev,
+		.owl-next {
+			position:absolute;
+			top:50%;
+			width:auto;
+			z-index:10;
+			@include transform(translateY(-50%));
+		}
+		.owl-prev {
+			left:15px;
+		}
+		.owl-next {
+			right:15px;
+		}
+	}
+}

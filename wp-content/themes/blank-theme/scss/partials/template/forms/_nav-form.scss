@@ -1,0 +1,74 @@
+/* =======================================================
+	Nav Form in Main Navigation
+======================================================= */
+
+.navbar-form {
+	border:0;
+	padding:0;
+	margin:0;
+	box-shadow:none;
+	position:relative;
+	.form-group {
+		margin-bottom:remify(20px);
+		input {
+			background:transparent;
+			border:0;
+			border-bottom:1px solid #fff;
+			border-radius:0;
+			box-shadow:none;
+			padding-left:0;
+			color:#fff;
+			@include rem('font-size', 16px);
+		}
+		::-webkit-input-placeholder {
+			color:#fff;
+		}
+		::-moz-placeholder {
+			color:#fff;
+		}
+		:-ms-input-placeholder {
+			color:#fff;
+		}
+		:-moz-placeholder {
+			color:#fff;
+		}
+	}
+	button[type="submit"] {
+		position:absolute;
+		top:0;
+		right:0;
+		background:none;
+		border:0;
+		padding-right:0;
+		.fa-search {
+			color:#fff;
+		}
+	}
+	@media (min-width:992px) {
+		float:right!important;
+		.form-group {
+			margin-bottom:0;
+			input {
+				padding-top:0;
+				border-color:#cacaca;
+				color:#797979;
+				height:auto;
+			}
+			::-webkit-input-placeholder {
+				color:#bdbdbd;
+			}
+			::-moz-placeholder {
+				color:#bdbdbd;
+			}
+			:-ms-input-placeholder {
+				color:#bdbdbd;
+			}
+			:-moz-placeholder {
+				color:#bdbdbd;
+			}
+		}
+		button[type="submit"] .fa-search {
+			color:#797979;
+		}
+	}
+}

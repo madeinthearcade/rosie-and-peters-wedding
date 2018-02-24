@@ -1,0 +1,11 @@
+/* =======================================================
+	Single Content Sidebar
+======================================================= */
+
+.box {
+	display:block;
+	padding:remify(30px);
+	background:$primary;
+	color:#fff;
+	height:100%; // If used with flexbox
+}
