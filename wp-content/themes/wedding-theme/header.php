@@ -15,7 +15,12 @@
 <body <?php body_class(); ?>>
 
 	<header role="header" class="main-header">
-      <div class="container-fluid">
+      <a href="#" id="menu-btn">
+         <span id="menu-btn__span">
+            Menu
+         </span>
+      </a>
+      <nav role="navigation" class="main-header__nav">
          <?php
          wp_nav_menu(array(
             'theme_location' => 'header-menu',
@@ -25,5 +30,5 @@
             'fallback_cb' => false
          ));
          ?>
-      </div>
+      </nav>
    </header>

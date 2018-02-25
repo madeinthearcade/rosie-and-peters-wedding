@@ -6,10 +6,10 @@
 
   	$(function () {
 
-  		$("li.menu-item-has-children").unbind('click').click(function(){
-  			$(this).siblings().children(".sub-menu").hide("fast");
-  			$(this).children(".sub-menu").slideToggle("fast");
-  		});
+      $("#menu-btn ").on('click',function(e){
+         e.preventDefault();
+         $(".main-header__nav").slideToggle();
+      });
 
   		var wow = new WOW(
   		{
