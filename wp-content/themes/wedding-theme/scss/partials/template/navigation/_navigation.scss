@@ -2,25 +2,48 @@
 	Main Navigation
 ======================================================= */
 
+#menu-btn {
+   display: block;
+   background: white;
+   text-align: center;
+   text-transform: uppercase;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   padding: rem(10px 0);
+   &:hover,
+   &:focus,
+   &:active {
+      text-decoration: none;
+   }
+}
+
+.main-header__nav {
+   padding-top: rem(2px);
+   padding-bottom: rem(12px);
+   background: white;
+   display: none;
+}
+
 .main-header__menu {
 	padding: 0;
 	margin: 0;
 	list-style: none;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	text-align: center;
 	li {
 		flex-basis: 0;
       flex-grow: 1;
-      padding: rem(25px 0);
+      padding: rem(12px);
 		a {
 			text-transform: uppercase;
 			text-decoration: none;
          letter-spacing: rem(2px);
          font-size: rem(14px);
-         color: white;
+         color: $baseColor;
 		}
 	}
 }
