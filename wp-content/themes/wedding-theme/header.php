@@ -12,7 +12,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="animsition">
 
 	<header role="header" class="main-header">
       <a href="#" id="menu-btn">
