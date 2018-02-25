@@ -57,7 +57,7 @@
          <h3>Destination</h3>
          <p>Santorini, Greece</p>
          <p>
-            <a href="#" class="btn" target="_blank">
+            <a href="https://www.google.co.uk/flights/#flt=/m/04jpl.JTR.2018-07-19*JTR./m/04jpl.2018-07-23;c:GBP;e:1;sd:1;t:f" class="btn" target="_blank">
                Find Flights
             </a>
          </p>
@@ -100,7 +100,7 @@
          <h3>Date</h3>
          <p>Saturday 21st July 2018</p>
          <p>
-            <a href="#" class="btn" target="_blank">
+            <a href="#rsvp" class="btn">
                RSVP
             </a>
          </p>
@@ -161,7 +161,7 @@
          <h3>Venue</h3>
          <p>Venetsanos Winery</p>
          <p>
-            <a href="#" class="btn" target="_blank">
+            <a href="https://www.google.co.uk/maps/dir/''/Venetsanos+Winery/@36.3822886,25.3615569,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1499ce59788b2e4f:0x6a312adbbff57d91!2m2!1d25.431597!2d36.382309" class="btn" target="_blank">
                Directions
             </a>
          </p>
