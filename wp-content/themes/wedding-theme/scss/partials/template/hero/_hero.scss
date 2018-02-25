@@ -15,7 +15,7 @@
       & > h1 {
          color: white;
          text-transform: lowercase;
-         font-size: rem(128px);
+         font-size: rem(60px);
          margin: 0;
       }
    }
@@ -25,7 +25,7 @@
       text-transform: uppercase;
       letter-spacing: rem(5px);
       color: white;
-      font-size: rem(30px);
+      font-size: rem(16px);
       margin: rem(20px 0);
    }
    &__scroller {
@@ -41,5 +41,13 @@
          letter-spacing: rem(2px);
          font-size: rem(14px);
       } 
+   }
+   @media (min-width:498px) {
+      &__text > h1 {
+         font-size: rem(128px);
+      }
+      &__tagline {
+         font-size: rem(30px);
+      }
    }
 }
