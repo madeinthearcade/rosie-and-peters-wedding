@@ -14,7 +14,7 @@
       $("a[href*=#]:not([href=#])").click(function() {
          if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") || location.hostname == this.hostname) {
             var target = $(this.hash),
-            headerHeight = $(".main-header").height() + 5; // Get fixed header height
+            headerHeight = $(".main-header").height() - 1; // Get fixed header height
             target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
             if (target.length) {
                $("html,body").animate({ scrollTop: target.offset().top - headerHeight }, 500);
@@ -52,7 +52,9 @@
          transition: function(url) {
             window.location.href = url;
          }
-      });      
+      });
+
+      $(".person").addClass("wow fadeInUp");
 
       var wow = new WOW(
          {

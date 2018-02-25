@@ -1,6 +1,6 @@
 <section id="schedule" class="section">
    <div class="container">
-      <h2 class="text-center">Schedule</h2>
+      <h2 class="text-center title title--big">Schedule</h2>
       <div class="row">
          <div class="col-sm-10 col-sm-offset-1">
 
