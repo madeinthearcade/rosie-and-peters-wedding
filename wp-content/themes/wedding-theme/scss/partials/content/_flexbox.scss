@@ -74,6 +74,10 @@
       text-align: center;
       position: relative;
       z-index: 10;
+      svg {
+         max-width: rem(46px);
+         max-height: rem(46px);
+      }
       h3 {
          color: $baseColor;
          position: relative;
