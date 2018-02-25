@@ -54,7 +54,7 @@
                c13.944-13.946,30.079-25.248,47.955-33.594C157.399,132.916,159.562,126.966,157.226,121.961z"/>
             <circle cx="177" cy="114" r="10"/>
          </svg>
-         <h3>Destination</h3>
+         <h3 class="title">Destination</h3>
          <p>Santorini, Greece</p>
          <p>
             <a href="https://www.google.co.uk/flights/#flt=/m/04jpl.JTR.2018-07-19*JTR./m/04jpl.2018-07-23;c:GBP;e:1;sd:1;t:f" class="btn" target="_blank">
@@ -97,7 +97,7 @@
                C265.693,105.469,272.202,83,291,83c15.21,0,25,12.93,25,27.58C316,130.076,296.56,145.978,267.661,170.099z M316.594,153
                c10.385-11.246,18.583-24.051,19.342-40h41.378l-9.635,14.453c-2.24,3.359-2.24,7.735,0,11.094L377.315,153H316.594z"/>
          </svg>
-         <h3>Date</h3>
+         <h3 class="title">Date</h3>
          <p>Saturday 21st July 2018</p>
          <p>
             <a href="#rsvp" class="btn">
@@ -158,7 +158,7 @@
                c2.135-3.933,0.677-8.851-3.256-10.987c-3.932-2.135-8.851-0.677-10.987,3.256l-25.227,46.471
                C287.137,122.518,288.594,127.436,292.527,129.571z"/>
          </svg>
-         <h3>Venue</h3>
+         <h3 class="title">Venue</h3>
          <p>Venetsanos Winery</p>
          <p>
             <a href="https://www.google.co.uk/maps/dir/''/Venetsanos+Winery/@36.3822886,25.3615569,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1499ce59788b2e4f:0x6a312adbbff57d91!2m2!1d25.431597!2d36.382309" class="btn" target="_blank">

@@ -14,19 +14,25 @@ h1, h2, h3, h4, h5, h6 {
    color: $baseColor;
    &.title {
       position: relative;
+      padding-bottom: rem(20px);
+      margin-bottom: rem(20px);
       &:after {
          content: '';
          position: absolute;
-         bottom: rem(-15px);
          left: 0;
          right: 0;
+         bottom: 0;
          max-width: rem(50px);
          height: rem(4px);
          margin: auto;
          background: $baseColor;
       }
       &--big {
+         padding: rem(0 0 30px 0);
          margin: rem(0 0 30px 0);
+         &:after {
+            bottom: rem(15px);
+         }
       }
    }
 }
