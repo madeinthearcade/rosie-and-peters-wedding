@@ -9,12 +9,17 @@
    text-transform: uppercase;
    top: 0;
    left: 0;
-   width: 100vw;
+   width: 100%;
    padding: rem(10px 0);
+   letter-spacing: rem(2px);
    &:hover,
    &:focus,
    &:active {
       text-decoration: none;
+      color: $primary;
+   }
+   @media (min-width:480px) {
+      display: none;
    }
 }
 
@@ -23,6 +28,11 @@
    padding-bottom: rem(12px);
    background: white;
    display: none;
+   @media (min-width:480px) {
+      display: block;
+      background: transparent;
+      padding: 0;
+   }
 }
 
 .main-header__menu {
@@ -44,6 +54,27 @@
          letter-spacing: rem(2px);
          font-size: rem(14px);
          color: $baseColor;
+         display: block;
 		}
-	}
+   }
+   @media (min-width:480px) {
+      flex-direction: row;
+      li {
+         flex-basis: auto;
+         a {
+            color: white;
+         }
+      }
+   }
+   @media (min-width:768px) {
+      li {
+         flex-basis: 0;
+      }
+   }
+}
+
+@media (min-width:480px) {
+   .main-header--fixed .main-header__menu li a {
+      color: $baseColor;
+   }
 }
