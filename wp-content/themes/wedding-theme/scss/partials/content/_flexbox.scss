@@ -79,7 +79,6 @@
          max-height: rem(46px);
       }
       h3 {
-         color: $baseColor;
          position: relative;
       }
       p {
@@ -98,6 +97,35 @@
    @media (min-width:992px) {
       &__item {
          flex-basis: 0;
+      }
+   }
+}
+
+/* =======================================================
+	Schedule
+======================================================= */
+
+.schedule__item {
+   text-align: center;
+   @media (min-width:768px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: left;
+      &__left,
+      &__right {
+         flex-basis: 0;
+         flex-grow: 1;
+      }
+      &__right {
+         text-align: right;
+         align-self: end;
+      }
+   }
+   @media (min-width:992px) {
+      &__left > p,
+      &__right > p {
+         font-size: rem(20px);
       }
    }
 }
