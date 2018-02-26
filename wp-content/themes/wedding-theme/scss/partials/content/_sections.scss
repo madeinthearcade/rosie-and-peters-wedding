@@ -13,12 +13,12 @@
       background-image: url('../img/template/registry-pattern.png');
       background-repeat: no-repeat;
       background-size: cover;
-      height: 90vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       .registry__box {
          background: white;
-         padding: rem(80px);
+         padding: rem(50px);
          margin: 0 auto;
          display: block;
          & > p {
@@ -27,6 +27,9 @@
             &:last-child {
                margin-bottom: 0;
             }
+         }
+         @media (min-width:768px) {
+            padding: rem(80px);
          }
       }
    }

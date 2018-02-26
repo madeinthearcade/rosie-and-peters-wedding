@@ -32,11 +32,17 @@
    }
    &__scroller {
       position: absolute;
-      bottom: 0;
+      bottom: rem(20px);
       left: 0;
       right: 0;
       margin: auto;
       text-align: center;
+      & > svg {
+         max-width: rem(46px);
+         display: block;
+         margin: 0 auto;
+         fill: white;
+      }
       & > a {
          color: white;
          text-transform: uppercase;

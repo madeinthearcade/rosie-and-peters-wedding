@@ -1,7 +1,7 @@
 <section id="registry" class="section">
    <div class="container">
       <div class="row justify-content-center">
-         <div class="col-sm-8">
+         <div class="col-md-8">
             <div class="registry__box">
                <h2 class="text-center title title--big">Registry</h2>
                <p>
