@@ -1,8 +1,8 @@
 <section id="schedule" class="section">
    <div class="container">
       <h2 class="text-center title title--big">Schedule</h2>
-      <div class="row">
-         <div class="col-sm-10 col-sm-offset-1">
+      <div class="row justify-content-center">
+         <div class="col-sm-10">
 
             <div class="schedule__item">
                <div class="schedule__item__left">
@@ -10,12 +10,12 @@
                   <p>
                      Family and Bridal Party - Ladies Only
                      <br>
-                     Dress: Casual
+                     Dress: Smart casual
                   </p>
                </div>
                <div class="schedule__item__right">
                   <p>
-                     9:30 - 10:00AM
+                     10:30
                      <br>
                      Anemomilos Hotel
                   </p>
@@ -24,54 +24,82 @@
 
             <div class="schedule__item">
                <div class="schedule__item__left">
-                  <h3>Bridal games</h3>
+                  <h3>Wedding ceremony</h3>
                   <p>
-                     Family and Bridal Party - Ladies Only
+                     All guests to arrive by 13:00
                      <br>
-                     Dress: Casual
+                     Dress: Beach formal
                   </p>
                </div>
                <div class="schedule__item__right">
                   <p>
-                     9:30 - 10:00AM
+                     13:00
                      <br>
-                     Anemomilos Hotel
+                     Venetsanos Winery
                   </p>
                </div>
             </div>
 
             <div class="schedule__item">
                <div class="schedule__item__left">
-                  <h3>Bridal games</h3>
+                  <h3>Drinks reception</h3>
                   <p>
-                     Family and Bridal Party - Ladies Only
-                     <br>
-                     Dress: Casual
+                     Group photos and ice cream!
                   </p>
                </div>
                <div class="schedule__item__right">
                   <p>
-                     9:30 - 10:00AM
+                     14:00
                      <br>
-                     Anemomilos Hotel
+                     Venetsanos Winery
                   </p>
                </div>
             </div>
 
             <div class="schedule__item">
                <div class="schedule__item__left">
-                  <h3>Bridal games</h3>
+                  <h3>Evening reception</h3>
                   <p>
-                     Family and Bridal Party - Ladies Only
-                     <br>
-                     Dress: Casual
+                     Champagne, strawberries, finger food
                   </p>
                </div>
                <div class="schedule__item__right">
                   <p>
-                     9:30 - 10:00AM
+                     16:00
                      <br>
-                     Anemomilos Hotel
+                     Pygros Restaurant
+                  </p>
+               </div>
+            </div>
+
+            <div class="schedule__item">
+               <div class="schedule__item__left">
+                  <h3>Dinner</h3>
+                  <p>
+                     Sit down for first course
+                  </p>
+               </div>
+               <div class="schedule__item__right">
+                  <p>
+                     17:45
+                     <br>
+                     Pygros Restaurant
+                  </p>
+               </div>
+            </div>
+
+            <div class="schedule__item">
+               <div class="schedule__item__left">
+                  <h3>Party starts</h3>
+                  <p>
+                     Sunset photos, sparklers and dancing!
+                  </p>
+               </div>
+               <div class="schedule__item__right">
+                  <p>
+                     19:45
+                     <br>
+                     Pygros Restaurant
                   </p>
                </div>
             </div>

@@ -11,10 +11,10 @@
 /* =======================================================
 	Vendor
 ======================================================= */
-@import 'partials/vendor/remify';
-@import '/node_modules/animsition/dist/css/animsition.css';
-@import '/node_modules/bootstrap/dist/css/bootstrap.css';
-@import '/node_modules/animate.css/animate.css';
+@import '../node_modules/sass-rem/rem';
+@import '../node_modules/animsition/dist/css/animsition.css';
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/animate.css/animate.css';
 
 /* =======================================================
 	Typography & Content

@@ -1,8 +1,9 @@
 <section id="weddingparty" class="section">
    <div class="container">
+      <h2 class="text-center title title--big">The Wedding Party</h2>
 
-      <div class="row">
-         <div class="col-sm-6">
+      <div class="row justify-content-center">
+         <div class="col-sm-4">
             <div class="person">
                <div class="person__image">
                   <img src="<?php echo get_template_directory_uri(); ?>/dist/img/template/rosie-lui.png" alt="Rosie Lui, The Bride">
@@ -13,7 +14,7 @@
                </div>
             </div>
          </div>
-         <div class="col-sm-6">
+         <div class="col-sm-4">
             <div class="person">
                <div class="person__image">
                   <img src="<?php echo get_template_directory_uri(); ?>/dist/img/template/peter-chan.png" alt="Peter Chan, The Groom">
@@ -62,8 +63,8 @@
          </div>
       </div>
 
-      <div class="row">
-         <div class="col-sm-4 col-sm-offset-2">
+      <div class="row justify-content-center">
+         <div class="col-sm-4">
             <div class="person">
                <div class="person__image">
                   <img src="<?php echo get_template_directory_uri(); ?>/dist/img/template/agnes-lui.png" alt="Agnes Lui">

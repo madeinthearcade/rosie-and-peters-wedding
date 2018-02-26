@@ -35,7 +35,7 @@ gulp.task("concat-scripts", function() {
       "node_modules/jquery/dist/jquery.js",
       "node_modules/jquery-migrate/dist/jquery-migrate.js",
       "node_modules/wowjs/dist/wow.js",
-      "node_modules/bootstrap/dist/js/bootstrap.js",
+      "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
       "node_modules/animsition/dist/js/animsition.js",
       "js/lib/modernizr.js",
       "js/javascript.js"
