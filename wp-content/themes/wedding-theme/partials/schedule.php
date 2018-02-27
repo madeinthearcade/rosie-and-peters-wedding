@@ -44,7 +44,9 @@
                <div class="schedule__item__left">
                   <h3>Drinks reception</h3>
                   <p>
-                     Group photos and ice cream!
+                     Start of group photos, look sharp!
+                     <br>
+                     We've got an ice cream cart too
                   </p>
                </div>
                <div class="schedule__item__right">
@@ -60,7 +62,9 @@
                <div class="schedule__item__left">
                   <h3>Evening reception</h3>
                   <p>
-                     Champagne, strawberries, finger food
+                     Champagne and strawberry welcome
+                     <br>
+                     Finger food &amp; DIY photobooth
                   </p>
                </div>
                <div class="schedule__item__right">
@@ -76,7 +80,9 @@
                <div class="schedule__item__left">
                   <h3>Dinner</h3>
                   <p>
-                     Sit down for first course
+                     Sit down for three course meal
+                     <br>
+                     Toasts, games and first dance
                   </p>
                </div>
                <div class="schedule__item__right">
@@ -92,7 +98,9 @@
                <div class="schedule__item__left">
                   <h3>Party starts</h3>
                   <p>
-                     Sunset photos, sparklers and dancing!
+                     Santorini sunset photos
+                     <br>
+                     Sparklers and dancing in the moonlight
                   </p>
                </div>
                <div class="schedule__item__right">
