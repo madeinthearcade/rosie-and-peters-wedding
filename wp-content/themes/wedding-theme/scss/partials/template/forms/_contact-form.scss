@@ -2,48 +2,20 @@
 	Contact Form
 ======================================================= */
 
-#contact-form {
-	display:block;
-	background:#f8f8f8;
-	padding:remify(30px 30px 10px 30px);
-	margin-bottom:remify(30px);
-	input, select, textarea {
-		display:block;
-		border:0;
-		background:#fff;
-		color:$bodyFont;
-		padding:remify(10px);
-		width:100%;
-		height:auto;
-		appearance:none;
-		margin-bottom:remify(20px);
-		&:focus {
-			outline:none;
-		}
-	}
-	select {
-		background:#fff url(../img/template/download-arrow.png) no-repeat 98% center;
-		background-size:20px 20px;
-		option:first-child {
-			color:#bfbfbf;
-		}
-	}
-	textarea {
-		min-height:150px;
-	}
-	input[type="submit"] {
-		display:block;
-		background:$secondary;
-		padding:remify(10px 15px);
-		color:#fff;
-		border:0;
-		border-radius:35px;
-		margin-bottom:0;
-		width:auto;
-		font-family:FontAwesome, 'Nunito Sans';
-		@include transition(.35s);
-		&:hover {
-			background-color:$primary;
-		}
-	}
+.form {
+   position: relative;
+   &--slider {
+      width: 100%;
+      fieldset {
+         width: 100%;
+         position: relative;
+         padding: 0;
+         margin: 0;
+         background: white;
+         box-sizing: border-box;
+         &:not(:first-of-type) {
+            display: none;
+         }
+      }
+   }
 }

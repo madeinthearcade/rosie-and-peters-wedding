@@ -34,10 +34,13 @@ gulp.task("concat-scripts", function() {
     .src([
       "node_modules/jquery/dist/jquery.js",
       "node_modules/jquery-migrate/dist/jquery-migrate.js",
+      "node_modules/jquery.easing/jquery.easing.min.js",
+      "node_modules/jquery-validation/dist/jquery.validate.min.js",
       "node_modules/wowjs/dist/wow.js",
       "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
       "node_modules/animsition/dist/js/animsition.js",
       "js/lib/modernizr.js",
+      "js/lib/form-slider.js",
       "js/javascript.js"
     ])
     .pipe(concat("main.js"))
