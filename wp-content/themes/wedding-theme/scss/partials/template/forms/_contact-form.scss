@@ -4,6 +4,25 @@
 
 .form {
    position: relative;
+   .input-group {
+      display: block;
+      position: relative;
+      margin-bottom: rem(20px);
+      &__label {
+         display: block;
+         position: relative;
+         margin: 0;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"] {
+         padding: rem(8px);
+         width: 100%;
+      }
+      input[type="submit"] {
+         @extend .btn;
+      }
+   }
    &--slider {
       width: 100%;
       fieldset {
@@ -17,5 +36,43 @@
             display: none;
          }
       }
+      .input-group {
+         input[type="text"],
+         input[type="tel"],
+         input[type="email"] {
+            appearance: none;
+            border: none;
+            border-bottom: 2px solid $baseColor;
+            padding-left: 0;
+            font-size: rem(20px);
+         }
+         &__label__span {
+            position: absolute;
+            top: rem(10px); // adjust to your needs
+            left: 0;
+            z-index: 2;
+            //font-size: rem(20px);
+            text-transform: uppercase;
+            letter-spacing: rem(2px);
+            @include transition(.25s);
+            &.focus {
+               top: rem(-20px);
+               color: lighten($baseColor, 30%);
+            }
+         }
+         .action-button,
+         input[type="submit"] {
+            @extend .btn;
+            border-width: rem(2px);
+         }
+      }
    }
+}
+
+label.error {
+   display: block;
+   background:#cc0000;
+   color: white;
+   padding: rem(10px);
+   margin: 0;
 }

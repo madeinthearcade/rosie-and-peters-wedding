@@ -56,6 +56,44 @@
 
       $(".person").addClass("wow fadeInUp");
 
+      $(".input-group__label__span").on("click", function() {
+        $(this).addClass("focus");
+        $(".wpcf7-form-control").focus();
+      });
+
+      if (!String.prototype.trim) {
+        (function() {
+          // Make sure we trim BOM and NBSP
+          var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+          String.prototype.trim = function() {
+            return this.replace(rtrim, "");
+          };
+        })();
+      }
+
+      [].slice
+        .call(document.querySelectorAll("input.wpcf7-form-control"))
+        .forEach(function(inputEl) {
+          // in case the input is already filled..
+          if (inputEl.value.trim() !== "") {
+            classie.add(inputEl.parentNode, "focus");
+          }
+
+          // events:
+          inputEl.addEventListener("focus", onInputFocus);
+          inputEl.addEventListener("blur", onInputBlur);
+        });
+
+      function onInputFocus(ev) {
+        classie.add(ev.target.parentNode.previousSibling, "focus");
+      }
+
+      function onInputBlur(ev) {
+        if (ev.target.value.trim() === "") {
+          classie.remove(ev.target.parentNode.previousSibling, "focus");
+        }
+      }
+
       var wow = new WOW(
          {
             boxClass:     'wow',

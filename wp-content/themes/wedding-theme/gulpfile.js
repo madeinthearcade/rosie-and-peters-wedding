@@ -39,6 +39,7 @@ gulp.task("concat-scripts", function() {
       "node_modules/wowjs/dist/wow.js",
       "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
       "node_modules/animsition/dist/js/animsition.js",
+      "node_modules/desandro-classie/classie.js",
       "js/lib/modernizr.js",
       "js/lib/form-slider.js",
       "js/javascript.js"
