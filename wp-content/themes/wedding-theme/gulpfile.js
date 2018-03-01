@@ -86,7 +86,13 @@ gulp.task("icons", function() {
 
 gulp.task("look", function() {
   // Watch .js files
-  gulp.watch("js/javascript.js", ["concat-scripts"]);
+  gulp.watch(
+     [
+        "js/lib/form-slider.js", 
+        "js/javascript.js"
+      ], 
+      ["concat-scripts"]
+   );
   // Watch .scss files
   gulp.watch(
     [

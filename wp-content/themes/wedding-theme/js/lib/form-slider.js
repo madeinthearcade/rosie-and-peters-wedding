@@ -42,17 +42,26 @@ $(".previous").click(function () {
 });
 
 $(".form--slider").validate({
-   rules: {
-      yourname: {
-         required: true,
-      },
-      mealchoice: {
-         required: true
-      }
-   }
+  rules: {
+    yourname: {
+      required: true
+    },
+    mealchoice: {
+      required: true
+    },
+    dietryrequirements: {
+       required: true
+    }
+  }
 });
 
-$(".next, submit-action-button").on('click', function (e) {
+$("input").keypress(function(event) {
+  if ( event.which == 13 ) {
+     event.preventDefault();
+  } 
+});
+
+$(".next, .submit-action-button").on('click', function (e) {
    var isvalidate = $(".form--slider").valid();
    if (isvalidate) {
 

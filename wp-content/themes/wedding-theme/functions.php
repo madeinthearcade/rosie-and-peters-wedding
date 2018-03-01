@@ -540,42 +540,42 @@ add_filter( 'script_loader_src', 'remove_css_js_ver', 10, 2 );
 /* =======================================================
 	Defer parsing
 ======================================================= */
-// if (!(is_admin() )) {
-// 	function defer_parsing_of_js ( $url ) {
-// 	if ( FALSE === strpos( $url, '.js' ) ) return $url;
-// 	if ( strpos( $url, 'jquery.js' ) ) return $url;
-// 	return "$url' defer ";
-// 	}
-// 	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
-// }
+if (!(is_admin() )) {
+	function defer_parsing_of_js ( $url ) {
+	if ( FALSE === strpos( $url, '.js' ) ) return $url;
+	if ( strpos( $url, 'jquery.js' ) ) return $url;
+	return "$url' defer ";
+	}
+	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+}
 
 /* =======================================================
 	Move all js files to footer
 ======================================================= */
-// function remove_head_scripts() { 
-//    remove_action('wp_head', 'wp_print_scripts'); 
-//    remove_action('wp_head', 'wp_print_head_scripts', 9); 
-//    remove_action('wp_head', 'wp_enqueue_scripts', 1);
+function remove_head_scripts() { 
+   remove_action('wp_head', 'wp_print_scripts'); 
+   remove_action('wp_head', 'wp_print_head_scripts', 9); 
+   remove_action('wp_head', 'wp_enqueue_scripts', 1);
  
-//    add_action('wp_footer', 'wp_print_scripts', 5);
-//    add_action('wp_footer', 'wp_enqueue_scripts', 5);
-//    add_action('wp_footer', 'wp_print_head_scripts', 5); 
-// } 
-// add_action( 'wp_enqueue_scripts', 'remove_head_scripts' );
+   add_action('wp_footer', 'wp_print_scripts', 5);
+   add_action('wp_footer', 'wp_enqueue_scripts', 5);
+   add_action('wp_footer', 'wp_print_head_scripts', 5); 
+} 
+add_action( 'wp_enqueue_scripts', 'remove_head_scripts' );
 
 /* =======================================================
 	Minify HTML
 // ======================================================= */
-// add_action('get_header', 'pt_html_minify_start');
-// function pt_html_minify_start()  {
-//     ob_start( 'pt_html_minyfy_finish' );
-// }
-// function pt_html_minyfy_finish( $html )  {
-//   $html = preg_replace('/<!--(?!s*(?:[if [^]]+]|!|>))(?:(?!-->).)*-->/s', '', $html);
-//   $html = str_replace(array("\r\n", "\r", "\n", "\t"), '', $html);
-//   while ( stristr($html, '  '))
-//      $html = str_replace('  ', ' ', $html);
-//  return $html;
-// }
+add_action('get_header', 'pt_html_minify_start');
+function pt_html_minify_start()  {
+    ob_start( 'pt_html_minyfy_finish' );
+}
+function pt_html_minyfy_finish( $html )  {
+  $html = preg_replace('/<!--(?!s*(?:[if [^]]+]|!|>))(?:(?!-->).)*-->/s', '', $html);
+  $html = str_replace(array("\r\n", "\r", "\n", "\t"), '', $html);
+  while ( stristr($html, '  '))
+     $html = str_replace('  ', ' ', $html);
+ return $html;
+}
 
 // Do Not Remove! ?>
