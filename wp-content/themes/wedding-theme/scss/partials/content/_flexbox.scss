@@ -1,0 +1,131 @@
+/* =======================================================
+	Flex Container
+======================================================= */
+
+.flex {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   &__item {
+      flex-basis: 100%;
+      flex-grow: 1;
+      padding: rem(80px);
+      position: relative;
+      overflow: hidden;
+      &:before,
+      &:after {
+         width: 0;
+         height: 0;
+         border: 10px solid transparent;
+         content: '';
+         position: absolute;
+         z-index: 1;
+      }
+      &:before {
+         top: 0;
+         left: 0;
+      }
+      &:after {
+         bottom: 0;
+         right: 0;
+      }
+      & > img {
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         margin: auto;
+         opacity: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         @include transition(1s);
+      }
+      &:hover > img {
+         opacity: 1;
+         @include transform(scale(1.1));
+      }
+      &:hover:before {
+         border-top-color: #F4E4D1;
+         border-right-color: #F4E4D1;
+         width: 100%;
+         height: 100%;
+         transition: width 0.35s ease-out, height 0.35s ease-out 0.35s;
+      }
+      &:hover:after {
+         border-bottom-color: #F4E4D1;
+         border-left-color: #F4E4D1;
+         width: 100%;
+         height: 100%;
+         transition: border-color 0s ease-out 0.8s, width 0.5s ease-out 0.8s, height 0.5s ease-out 1.4s;
+      }
+      // browser's that don't support object-fit
+      &.compat-object-fit {
+         background-size: cover;
+         background-position: center center;
+         img {
+            opacity: 0;
+         }
+      }
+   }
+   &__caption {
+      color: white;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      svg {
+         max-width: rem(46px);
+         max-height: rem(46px);
+      }
+      h3 {
+         position: relative;
+      }
+      p {
+         font-size: rem(24px);
+         color: $baseColor;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+   @media (min-width:768px) {
+      &__item {
+         flex-basis: 50%;
+      }
+   }
+   @media (min-width:992px) {
+      &__item {
+         flex-basis: 0;
+      }
+   }
+}
+
+/* =======================================================
+	Schedule
+======================================================= */
+
+.schedule__item {
+   text-align: center;
+   @media (min-width:768px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: left;
+      &__left,
+      &__right {
+         flex-basis: 0;
+         flex-grow: 1;
+      }
+      &__right {
+         text-align: right;
+         align-self: end;
+      }
+   }
+   @media (min-width:992px) {
+      &__left > p,
+      &__right > p {
+         font-size: rem(20px);
+      }
+   }
+}

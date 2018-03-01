@@ -1,0 +1,61 @@
+/* =======================================================
+	Hero
+======================================================= */
+
+#hero {
+   display: flex;
+   flex-direction: column;
+   background-image: url('../img/template/hero-bg.png');
+   background-repeat: repeat;
+   background-size: contain;
+   min-height: 100vh;
+   position: relative;
+   justify-content: center;
+   &__text {
+      & > h1 {
+         color: white;
+         text-transform: lowercase;
+         font-size: rem(60px);
+         margin: 0;
+         line-height: 1;
+      }
+   }
+   &__tagline {
+      font-family: $baseFont;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: rem(5px);
+      color: white;
+      font-size: rem(16px);
+      margin: rem(25px 0);
+      line-height: rem(30px);
+   }
+   &__scroller {
+      position: absolute;
+      bottom: rem(20px);
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      & > svg {
+         max-width: rem(46px);
+         display: block;
+         margin: 0 auto;
+         fill: white;
+      }
+      & > a {
+         color: white;
+         text-transform: uppercase;
+         letter-spacing: rem(2px);
+         font-size: rem(14px);
+      } 
+   }
+   @media (min-width:498px) {
+      &__text > h1 {
+         font-size: rem(128px);
+      }
+      &__tagline {
+         font-size: rem(28px);
+      }
+   }
+}

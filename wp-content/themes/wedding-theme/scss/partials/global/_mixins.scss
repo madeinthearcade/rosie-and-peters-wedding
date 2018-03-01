@@ -1,0 +1,30 @@
+@mixin opacity($opacity) {
+	opacity:$opacity; $opacity-ie:$opacity * 100; 
+	filter:alpha(opacity=$opacity-ie);
+}
+
+@mixin transition ($transition) {
+	transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+}
+
+@mixin box-sizing ($box-sizing) {
+	box-sizing:$box-sizing;
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+}
+
+@mixin border-radius ($border-radius) {
+	border-radius:$border-radius;
+	-webkit-border-radius:$border-radius;
+	-moz-border-radius:$border-radius;
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}

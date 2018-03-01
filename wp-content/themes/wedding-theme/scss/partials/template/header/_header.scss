@@ -1,0 +1,21 @@
+/* =======================================================
+	Header
+======================================================= */
+
+.main-header {
+   display: block;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   z-index: 20;
+   background: rgba(255, 255, 255, 0);
+   transition: .35s;
+   @media (min-width:480px) {
+      top: 0;
+      bottom: auto;
+      &--fixed {
+         background: rgba(255, 255, 255, 1);
+      }
+   }
+}

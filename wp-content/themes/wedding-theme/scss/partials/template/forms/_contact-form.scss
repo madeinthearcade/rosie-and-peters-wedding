@@ -1,0 +1,118 @@
+/* =======================================================
+	Contact Form
+======================================================= */
+
+.form {
+   position: relative;
+   .input-group {
+      //display: block;
+      position: relative;
+      margin-bottom: rem(20px);
+      &__label {
+         display: block;
+         position: relative;
+         margin: 0;
+         width: 100%;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"] {
+         padding: rem(8px);
+         width: 100%;
+      }
+      input[type="submit"] {
+         @extend .btn;
+      }
+   }
+   &--slider {
+      width: 100%;
+      fieldset {
+         width: 100%;
+         position: relative;
+         padding: 0;
+         margin: 0;
+         background: white;
+         box-sizing: border-box;
+         &:not(:first-of-type) {
+            display: none;
+         }
+      }
+      .input-group {
+         justify-content: space-between;
+         input[type="text"],
+         input[type="tel"],
+         input[type="email"] {
+            appearance: none;
+            border: none;
+            border-bottom: 2px solid $baseColor;
+            padding-left: 0;
+            font-size: rem(20px);
+         }
+         textarea {
+            border: 2px solid $baseColor;
+            padding: rem(10px);
+            width: 100%;
+            height: rem(100px);
+            display: block;
+         }
+         &__label__span {
+            position: absolute;
+            top: rem(10px); // adjust to your needs
+            left: 0;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: rem(2px);
+            @include transition(.25s);
+            &.focus {
+               top: rem(-20px);
+               opacity: 0.4;
+            }
+            &--static {
+               text-transform: uppercase;
+               letter-spacing: rem(2px);
+            }
+         }
+         .action-button,
+         input[type="submit"] {
+            @extend .btn;
+            border-width: rem(2px);
+         }
+      }
+   }
+}
+
+label.error {
+   display: block;
+   background:#cc0000;
+   color: white;
+   padding: rem(10px);
+   margin: 0;
+}
+
+.mealchoice {
+   width: 100%;
+}
+
+.wpcf7-radio {
+   display: flex;
+   flex-direction: column;
+   .wpcf7-list-item {
+      margin: rem(0 0 8px 0);
+   }
+   @media (min-width:576px) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      .wpcf7-list-item {
+         display: block;
+         flex-basis: 0;
+         flex-grow: 1;
+         margin: rem(10px 0 0);
+      }
+   }
+}
+
+div.wpcf7 .ajax-loader {
+   position: absolute;
+   right: 0;
+   bottom: rem(-20px);
+}

@@ -1,0 +1,23 @@
+/* =======================================================
+	Globals
+======================================================= */
+
+html, body {
+   font-size: rem(16px);
+}
+
+body { 
+	font-family:$baseFont;
+	font-weight:$heavyWeight;
+	line-height:1.5;
+	overflow-x:hidden;
+   position:relative;
+	-webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+	display:block;
+	position:relative;
+	padding:0;
+}

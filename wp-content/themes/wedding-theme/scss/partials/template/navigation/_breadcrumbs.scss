@@ -1,0 +1,40 @@
+/* =======================================================
+	Breadcrumbs
+======================================================= */
+
+#crumbs {
+	display:block;
+	padding:remify(0 0 10px 0);
+	margin:remify(0 0 30px 0);
+	border-bottom:1px solid $highlight;
+	list-style:none;
+	overflow:hidden;
+	@extend %clearfix;
+	li {
+		float:left;
+		padding-left:remify(20px);
+		margin-left:remify(10px);
+		position:relative;
+		color:$secondary;
+		&:before {
+			content:'\f178 ';
+			font-family:'FontAwesome';
+			color:#cacaca;
+			position:absolute;
+			left:0;
+		}
+		&:first-child {
+			padding-left:0;
+			margin-left:0;
+			&:before {
+				display:none;
+			}
+		}
+		a {
+			color:#848484;
+		}
+	}
+	@media (min-width:992px) {
+		margin:remify(0 0 50px 0);
+	}
+}

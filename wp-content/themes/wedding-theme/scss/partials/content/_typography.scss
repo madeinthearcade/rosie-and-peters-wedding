@@ -1,0 +1,81 @@
+/* =======================================================
+	Typography
+======================================================= */
+
+$titleFont:		'Yeseva One', cursive;
+$baseFont:		'Josefin Sans', sans-serif;
+$baseWeight:	400;
+$heavyWeight:	700;
+$baseSize:		16px;
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $titleFont;
+	line-height: normal;
+   color: $baseColor;
+   &.title {
+      position: relative;
+      padding-bottom: rem(20px);
+      margin-bottom: rem(20px);
+      &:after {
+         content: '';
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         max-width: rem(50px);
+         height: rem(4px);
+         margin: auto;
+         background: $baseColor;
+      }
+      &--big {
+         padding: rem(0 0 30px 0);
+         margin: rem(0 0 30px 0);
+         &:after {
+            bottom: rem(15px);
+         }
+      }
+   }
+   span {
+      display: block;
+      font-size: rem(20px);
+      font-family: $baseFont;
+   }
+}
+
+h1 {
+	@include rem('font-size', 48px);
+}
+
+h2 {
+	@include rem('font-size', 48px);
+}
+
+h3 {
+	@include rem('font-size', 30px);
+}
+
+h4 {
+	@include rem('font-size', 20px);
+}
+
+h5 {
+	@include rem('font-size', 18px);
+}
+
+h6 {
+	@include rem('font-size', 16px);
+}
+
+p {
+	margin-bottom: rem(30px);
+}
+
+a {
+	color:$primary;
+	text-decoration:none;
+	@include transition(.35s);
+	&:hover {
+		color:$highlight;
+		text-decoration:none;
+	}
+}
