@@ -87,6 +87,9 @@ $(".next, submit-action-button").on('click', function (e) {
          complete: function () {
             current_fs.hide();
             animating = false;
+            current_fs.css({
+               'position': 'relative'
+            });
          },
          //this comes from the custom easing plugin
          easing: 'easeInOutBack'
